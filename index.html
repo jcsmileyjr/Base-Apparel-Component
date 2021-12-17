@@ -18,54 +18,63 @@
 
       grid-template-areas: 
       "header"
-      "primaryImage"
+      "img"
       "main";
     }
 
-    .primayImage {
-      grid-area: image;
+    .primaryImage {
+      grid-area: img;
     }
     
-    main {
+    .main {
       grid-area: main;
     }
     
-    header {
+    .header {
       grid-area: header;
     }
 
     .primaryImage--mobileStyle {
       min-height: 100%;
-      width: 100%;
+      display: flex;
     }
+
+    .primaryImage--desktopStyle {
+        min-height: 100%;
+        display: none
+    }     
 
     @media only screen and (min-width: 600px) {
       body {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: .1fr 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: .2fr 1fr;
         grid-template-areas: 
-        "header image"
-        "main image";
+        "header img"
+        "main img";
       }
+
+      .primaryImage--mobileStyle {
+        min-height: 100%;
+        display: none;
+      }
+      .primaryImage--desktopStyle {
+        min-height: 100%;
+        display: flex;
+      }      
 
     }
   </style>
 </head>
 <body>
-  <header>
+  <header class="header">
     <img src="images/logo.svg" alt="" class="header__logo--style" />
   </header>
   <div class="primaryImage">
     <img src="images/hero-mobile.jpg" class="primaryImage--mobileStyle" alt=""/>
+    <img src="images/hero-desktop.jpg" class="primaryImage--desktopStyle" alt=""/>
   </div>
-  <main>
+  <main class="main">
     <h1>We're coming soon</h1>
     <p>Hello fellow shoppers! We're currently building our new fashion store. 
   Add your email below to stay up-to-date with announcements and our launch deals.</p>
