@@ -7,10 +7,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap" rel="stylesheet">
   <style>
     :root {
-      --Very-dark-blue-main-bg: hsl(217, 54%, 11%);
-
       --Primary-Desaturated-Red: hsl(0, 36%, 70%);
       --Primary-Soft-Red: hsl(0, 93%, 68%);
       --Neutral-Dark-Grayish-Red: hsl(0, 6%, 24%);
@@ -21,9 +22,11 @@
     body {
       min-height: 100vh;
       margin: 0;
+      font-family: 'Josefin Sans', Sans;
+      font-size: 16px;
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: .1fr repeat(2, 1fr);
+      grid-template-rows: .1fr .1fr 1fr;
       grid-column-gap: 0px;
       grid-row-gap: 0px;
 
@@ -50,7 +53,7 @@
     }
 
     .primaryImage--mobileStyle {
-      min-height: 100%;
+      /* min-height: 100%; */
       display: flex;
       width: 100%;
     }
@@ -66,6 +69,23 @@
       text-transform: uppercase;
       text-align: center;
       font-size: 2.5em;
+    }
+
+    .banner-word, p {
+      color:var(--Primary-Desaturated-Red);
+    }
+
+    .banner-word {
+      font-weight: 300;
+    }
+
+    .banner-secondary {
+      font-family: sans-serif;
+    }
+
+    p {
+      font-weight: 600;
+      line-height: 1.5em;
     }
 
     @media only screen and (min-width: 600px) {
@@ -100,7 +120,7 @@
     <img src="images/hero-desktop.jpg" class="primaryImage--desktopStyle" alt=""/>
   </div>
   <main>
-    <h1>We're coming soon</h1>
+    <h1><span class="banner-word">We're</span> <span class="banner-secondary">coming soon</span></h1>
     <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
     <input type="email" placeholder="Email Address" ></input>
   </main>
