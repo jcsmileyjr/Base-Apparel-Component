@@ -95,8 +95,16 @@
     }
 
     .input__container {
-      width: 100%;
+      /* width: 100%; */
       text-align: center;
+      margin: auto;
+      /* padding: 15px 0 15px 20px; */
+      border: .1px var(--Primary-Desaturated-Red) solid;
+      border-radius: 45px;
+      background-color: transparent;
+      display: flex;
+      justify-content: space-between;
+      max-height: 15%;
     }
 
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -112,12 +120,17 @@
       color: var(--Primary-Desaturated-Red);
     }
 
-    input {
-      width: 80%;
-      padding: 15px 0 15px 20px;
-      border: .1px var(--Primary-Desaturated-Red) solid;
-      border-radius: 45px;
+    .input--style {
+      border: none;
+      margin-left: 20px;
       background-color: transparent;
+    }
+
+    .input__image--style {
+      padding: 15px 25px;
+      background-image: linear-gradient(45deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+      border-radius: 90px;
+      /* flex: .3; */
     }
 
     @media only screen and (min-width: 600px) {
@@ -155,7 +168,8 @@
     <h1><span class="banner-word">We're</span> <span class="banner-secondary">coming soon</span></h1>
     <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
     <div class="input__container">
-      <input type="email" placeholder="Email Address" ></input>
+      <input type="email" placeholder="Email Address" class="input--style" ></input>
+      <img src="images/icon-arrow.svg" class="input__image--style" alt="" />
     </div>
   </main>
 </body>
