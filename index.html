@@ -86,11 +86,38 @@
 
     .banner-secondary {
       font-family: sans-serif;
+      color: var(--Neutral-Dark-Grayish-Red);
     }
 
     p {
       font-weight: 600;
       line-height: 1.5em;
+    }
+
+    .input__container {
+      width: 100%;
+      text-align: center;
+    }
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: var(--Primary-Desaturated-Red);
+      opacity: .55; /* Firefox */
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: var(--Primary-Desaturated-Red);
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      color: var(--Primary-Desaturated-Red);
+    }
+
+    input {
+      width: 80%;
+      padding: 15px 0 15px 20px;
+      border: .1px var(--Primary-Desaturated-Red) solid;
+      border-radius: 45px;
+      background-color: transparent;
     }
 
     @media only screen and (min-width: 600px) {
@@ -127,7 +154,9 @@
   <main>
     <h1><span class="banner-word">We're</span> <span class="banner-secondary">coming soon</span></h1>
     <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-    <input type="email" placeholder="Email Address" ></input>
+    <div class="input__container">
+      <input type="email" placeholder="Email Address" ></input>
+    </div>
   </main>
 </body>
 </html>
