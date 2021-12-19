@@ -129,6 +129,21 @@
       border-radius: 90px;
     }
 
+    .input__error--style {
+      height: 50%;
+      align-self: center;
+      margin-right: 20px;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .errorMessage--style {
+      color: var(--Primary-Soft-Red);
+      margin-left: 20px;
+    }
+
     @media only screen and (min-width: 600px) {
       body {
         background: url("images/bg-pattern-desktop.svg");
@@ -178,10 +193,15 @@
 
       .input__container {
         margin: 40px auto;
+        margin-bottom: 5px;
       }
 
       .input--style {
         flex:1;
+        margin-left: 30px;
+      }
+
+      .errorMessage--style {
         margin-left: 30px;
       }
 
@@ -200,9 +220,23 @@
     <h1><span class="banner-word">We're</span> <span class="banner-secondary">coming soon</span></h1>
     <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
     <div class="input__container">
-      <input type="email" placeholder="Email Address" class="input--style" ></input>
+      <input type="email" placeholder="Email Address" class="input--style" id="input1" required ></input>
+      <img src="images/icon-error.svg" id="inputError" class="input__error--style hide" alt="" />
       <img src="images/icon-arrow.svg" class="input__image--style" alt="" />
     </div>
+    <label id="errorMessage" for="input1" class="errorMessage--style hide">Please provide a valid email!</label>
   </main>
 </body>
+<script>
+  const input1 = document.getElementById('input1');
+  input1.addEventListener('input', () => {
+    if(input1.checkValidity() === false){
+      document.getElementById("inputError").classList.remove('hide');
+      document.getElementById("errorMessage").classList.remove('hide');
+    }else{
+      document.getElementById("inputError").classList.add('hide');
+      document.getElementById("errorMessage").classList.add('hide');
+    }
+  });
+</script>
 </html>
