@@ -17,14 +17,14 @@ This is a solution to the [Artical Preview component challenge on Frontend Mento
 
 ### Links
 
-- [Live Site URL](https://jcsmileyjr.github.io/Base-Apparel-Component/)
+- [Click the play with the Live site](https://jcsmileyjr.github.io/Base-Apparel-Component/)
 - [blog post coming soon]()
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- CSS Grid
 - Mobile-first workflow
 - JavaScript for Functionality
 
