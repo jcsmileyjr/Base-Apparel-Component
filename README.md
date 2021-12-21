@@ -17,7 +17,7 @@ This is a solution to the [Base Apparel component challenge on Frontend Mentor](
 
 ### Links
 
-- [Click the play with the Live site](https://jcsmileyjr.github.io/Base-Apparel-Component/)
+- [Click to play with the Live site](https://jcsmileyjr.github.io/Base-Apparel-Component/)
 - [Click to read the blog post](https://dev.to/jcsmileyjr/frontend-challenge-9-base-apparel-component-3g68)
 
 ### Built with
